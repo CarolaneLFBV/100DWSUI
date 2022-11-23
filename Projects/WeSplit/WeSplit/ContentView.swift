@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var tipPercentage = 10
     
     // Challenge
-    let tipPercentages = 1...100
+    let tipPercentages = 0...100
     //let tipPercentages = [10, 15, 20, 25, 0]
     
     @FocusState private var isFocused: Bool
@@ -45,7 +45,7 @@ struct ContentView: View {
                         .focused($isFocused)
                     
                     Text(amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                        .foregroundColor(.red)
+                        .foregroundColor(.blue)
                         .fontWeight(.bold)
                 }
                 
@@ -70,6 +70,7 @@ struct ContentView: View {
                 // Challenge
                 Section("💳 Total Amount") {
                     Text(totalWithoutTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .foregroundColor(tipPercentage == 0 ? .red : .black)
                 }
                 
                 Section("🍽 Amount per person") {
