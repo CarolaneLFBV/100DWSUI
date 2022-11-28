@@ -8,15 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italie", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
     @State private var correctAnswer = Int.random(in: 0...2)
     
-    @State private var showingScore = false
-    @State private var showingEnd = false
-    @State private var scoreTitle = ""
+    @State private var showingScore: Bool = false
+    @State private var showingEnd: Bool = false
+    @State private var scoreTitle: String = ""
     
-    @State private var score = 0
-    @State private var question = 0
+    @State private var score: Int = 0
+    @State private var question: Int = 0
+    
+    // CHALLENGE ANIMATION
+    @State private var animationAmount: Double = 0.0
+    @State private var isTapped: Bool = false
+    
+    func isFlagTapped() {
+        if isTapped {
+            withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                animationAmount += 360
+            }
+        }
+    }
     
     func endofGame() {
         switch score {
@@ -104,10 +116,14 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
+                            isTapped.toggle()
+                            isFlagTapped()
+                            
                         } label: {
                             Image(countries[number])
                                 .renderingMode(.original)
                                 .roundedFlagStyle()
+                                .rotation3DEffect(.degrees(animationAmount), axis: (x:0, y:1, z:0))
                         }
                     }
                 }
