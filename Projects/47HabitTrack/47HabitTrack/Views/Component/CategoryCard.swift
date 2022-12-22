@@ -20,11 +20,7 @@ struct CategoryCard: View {
                 .foregroundColor(.white)
                 .font(.system(size: 14, weight: .semibold, design: .none))
         }
-        .frame(width: 110, height: 80)
-        .padding()
-        .background(Color("MidnightGreen"))
-        .clipShape(RoundedRectangle(cornerRadius: 15))
-        .shadow(color: Color("MidnightGreen").opacity(0.4), radius: 5, x: 5, y: 5)
+        .categoryCardBG()
     }
 }
 

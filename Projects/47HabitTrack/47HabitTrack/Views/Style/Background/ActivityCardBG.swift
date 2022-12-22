@@ -1,5 +1,5 @@
 //
-//  CardBackground.swift
+//  ActivityCardBG.swift
 //  47HabitTrack
 //
 //  Created by Carolane LEFEBVRE on 20/12/2022.
@@ -23,15 +23,15 @@ extension View {
     }
 }
 
-struct CardBackground: View {
+struct ActivityCardBG: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             .cardbackground()
     }
 }
 
-struct CardBackground_Previews: PreviewProvider {
+struct ActivityCardBG_Previews: PreviewProvider {
     static var previews: some View {
-        CardBackground()
+        ActivityCardBG()
     }
 }

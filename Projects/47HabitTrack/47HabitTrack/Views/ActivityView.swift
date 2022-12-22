@@ -1,16 +1,27 @@
-//
-//  ActivityView.swift
-//  47HabitTrack
-//
-//  Created by Carolane LEFEBVRE on 20/12/2022.
-//
+    //
+    //  ActivityView.swift
+    //  47HabitTrack
+    //
+    //  Created by Carolane LEFEBVRE on 20/12/2022.
+    //
 
 import SwiftUI
 
 struct ActivityView: View {
     @State var activity : Activity
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                Text(activity.description)
+                
+                Image(systemName: activity.isDone ? "checkmark.square.fill" : "square")
+                    .font(.system(size: 25))
+                    .foregroundColor(activity.isDone ? Color("EtonBlue") : Color("EtonBlue"))
+                
+            }
+            .navigationTitle(activity.name)
+        }
     }
 }
 

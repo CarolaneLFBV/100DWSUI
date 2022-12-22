@@ -10,6 +10,11 @@ import SwiftUI
 struct ActivityCard: View {
     @State var activity: Activity
     
+    func addToDone() {
+        activity.isDone.toggle()
+        UserDefaults.standard.set(activity.isDone, forKey: "\(activity.name)isDone")
+    }
+    
     var body: some View {
         VStack {
             HStack {
@@ -19,13 +24,14 @@ struct ActivityCard: View {
                 Spacer()
                     .frame(height: 40)
                 
-                Image(systemName: activity.isDone ? "checkmark.square.fill" : "square")
-                    .font(.system(size: 25))
-                    .foregroundColor(activity.isDone ? Color("EtonBlue") : Color("EtonBlue"))
-                    .onTapGesture {
-                        self.activity.isDone.toggle()
-                        UserDefaults.standard.set(activity.isDone, forKey: "\(activity.name)isDone")
-                    }
+                
+                Button(action: {
+                    addToDone()
+                }, label: {
+                    Image(systemName: activity.isDone ? "checkmark.square.fill" : "square")
+                        .font(.system(size: 25))
+                        .foregroundColor(activity.isDone ? Color("EtonBlue") : Color("EtonBlue"))
+                })
             }
             
             HStack {

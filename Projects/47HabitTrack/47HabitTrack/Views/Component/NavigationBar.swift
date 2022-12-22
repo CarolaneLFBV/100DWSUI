@@ -1,13 +1,13 @@
 //
-//  TabBar.swift
+//  NavigationBar.swift
 //  47HabitTrack
 //
-//  Created by Carolane LEFEBVRE on 20/12/2022.
+//  Created by Carolane LEFEBVRE on 22/12/2022.
 //
 
 import SwiftUI
 
-struct TabBar: View {
+struct NavigationBar: View {
     @State private var selectedIndex = 0
     
     let icons = [
@@ -22,13 +22,13 @@ struct TabBar: View {
             ZStack {
                 switch selectedIndex {
                     case 0:
-                        ContentView()
+                        HomeView(activities: Activity.allActivities)
 
                     case 1:
                         ContentView()
 
                     default:
-                        ContentView()
+                        HomeView(activities: Activity.allActivities)
 
                         
                 }
@@ -70,8 +70,8 @@ struct TabBar: View {
     }
 }
 
-struct TabBar_Previews: PreviewProvider {
+struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        NavigationBar()
     }
 }
