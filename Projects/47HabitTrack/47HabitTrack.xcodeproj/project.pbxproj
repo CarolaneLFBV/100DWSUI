@@ -24,6 +24,7 @@
 		5151CBA629545D5E006C6785 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151CBA529545D5E006C6785 /* NavigationBar.swift */; };
 		5151CBAB29546353006C6785 /* CategoryCardBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151CBAA29546353006C6785 /* CategoryCardBG.swift */; };
 		5151CBB0295469AE006C6785 /* ActivityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5151CBAF295469AE006C6785 /* ActivityClass.swift */; };
+		51A2A93A29746A8E00B4B05C /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A2A93929746A8E00B4B05C /* AddActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		5151CBA529545D5E006C6785 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		5151CBAA29546353006C6785 /* CategoryCardBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCardBG.swift; sourceTree = "<group>"; };
 		5151CBAF295469AE006C6785 /* ActivityClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClass.swift; sourceTree = "<group>"; };
+		51A2A93929746A8E00B4B05C /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				511B7B9F294CBD1C00CAF397 /* ContentView.swift */,
 				511B7BB32951EF3700CAF397 /* HomeView.swift */,
 				511B7BC52951FA9000CAF397 /* ActivityView.swift */,
+				51A2A93929746A8E00B4B05C /* AddActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				511B7BAD294CBF3B00CAF397 /* ActivityItems.swift in Sources */,
 				511B7BA0294CBD1C00CAF397 /* ContentView.swift in Sources */,
+				51A2A93A29746A8E00B4B05C /* AddActivityView.swift in Sources */,
 				5151CBAB29546353006C6785 /* CategoryCardBG.swift in Sources */,
 				511B7BC62951FA9000CAF397 /* ActivityView.swift in Sources */,
 				511B7BB42951EF3700CAF397 /* HomeView.swift in Sources */,

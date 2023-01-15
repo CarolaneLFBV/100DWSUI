@@ -25,7 +25,7 @@ struct NavigationBar: View {
                         HomeView(activities: Activity.allActivities)
 
                     case 1:
-                        ContentView()
+                        AddActivityView(category: Category)
 
                     default:
                         HomeView(activities: Activity.allActivities)
