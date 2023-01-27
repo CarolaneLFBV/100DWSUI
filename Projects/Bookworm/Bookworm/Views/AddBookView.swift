@@ -17,8 +17,8 @@ struct AddBookView: View {
     @State private var review: String = ""
     @State private var rating: Int = 3
     
-    let genres = ["Horror", "Romance", "Kids", "Thriller", "Sci-fi", "Mystery", "Poetry", "Fantasy"]
-    
+    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller", "Sci-fi"]
+
     var body: some View {
         NavigationStack {
             Form {
@@ -27,8 +27,8 @@ struct AddBookView: View {
                     TextField("Author", text: $author)
                     
                     Picker("Genre", selection: $genre) {
-                        ForEach(genres, id: \.self) { genre in
-                            Text(genre)
+                        ForEach(genres, id: \.self) {
+                            Text($0)
                         }
                     }
                 }
@@ -52,6 +52,7 @@ struct AddBookView: View {
                         dismiss()
                     }
                 }
+                .disabled(title.isEmpty || author.isEmpty || genre.isReallyEmpty)
             }
             .navigationTitle("New Book")
         }

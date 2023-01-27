@@ -17,6 +17,9 @@
 		51991DDE2984458400747B3F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51991DDD2984458400747B3F /* RatingView.swift */; };
 		51991DE0298449E600747B3F /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51991DDF298449E600747B3F /* EmojiRatingView.swift */; };
 		51FB1E25298464CC0051E49B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB1E24298464CC0051E49B /* DetailView.swift */; };
+		51FB1E2A29846E5E0051E49B /* BookExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB1E2929846E5E0051E49B /* BookExtension.swift */; };
+		51FB1E2D298470490051E49B /* ReviewDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB1E2C298470490051E49B /* ReviewDateView.swift */; };
+		51FB1E302984719B0051E49B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FB1E2F2984719B0051E49B /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		51991DDD2984458400747B3F /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		51991DDF298449E600747B3F /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		51FB1E24298464CC0051E49B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		51FB1E2929846E5E0051E49B /* BookExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookExtension.swift; sourceTree = "<group>"; };
+		51FB1E2C298470490051E49B /* ReviewDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDateView.swift; sourceTree = "<group>"; };
+		51FB1E2F2984719B0051E49B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		51FB1E26298464E10051E49B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				51FB1E2E298471870051E49B /* Extensions */,
 				51991DD629843B7600747B3F /* DataController.swift */,
 				51991DD829843B8000747B3F /* Bookworm.xcdatamodeld */,
 			);
@@ -92,6 +99,7 @@
 		51FB1E27298464EA0051E49B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				51FB1E2B298470390051E49B /* Styles */,
 				51FB1E28298464F90051E49B /* Components */,
 				51991DCA29843B5E00747B3F /* ContentView.swift */,
 				51FB1E24298464CC0051E49B /* DetailView.swift */,
@@ -107,6 +115,23 @@
 				51991DDD2984458400747B3F /* RatingView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		51FB1E2B298470390051E49B /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				51FB1E2C298470490051E49B /* ReviewDateView.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		51FB1E2E298471870051E49B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51FB1E2929846E5E0051E49B /* BookExtension.swift */,
+				51FB1E2F2984719B0051E49B /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,12 +205,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				51991DCB29843B5E00747B3F /* ContentView.swift in Sources */,
+				51FB1E2A29846E5E0051E49B /* BookExtension.swift in Sources */,
 				51FB1E25298464CC0051E49B /* DetailView.swift in Sources */,
 				51991DDA29843B8000747B3F /* Bookworm.xcdatamodeld in Sources */,
 				51991DE0298449E600747B3F /* EmojiRatingView.swift in Sources */,
 				51991DD729843B7600747B3F /* DataController.swift in Sources */,
+				51FB1E2D298470490051E49B /* ReviewDateView.swift in Sources */,
 				51991DDE2984458400747B3F /* RatingView.swift in Sources */,
 				51991DC929843B5E00747B3F /* BookwormApp.swift in Sources */,
+				51FB1E302984719B0051E49B /* StringExtension.swift in Sources */,
 				51991DDC29843CDE00747B3F /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

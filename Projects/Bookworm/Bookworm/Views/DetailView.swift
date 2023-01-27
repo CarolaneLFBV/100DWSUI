@@ -10,10 +10,20 @@ import SwiftUI
 struct DetailView: View {
     let book: Book
     
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    @State private var isShowing: Bool = false
+    
+    func deleteBook() {
+        moc.delete(book)
+        try? moc.save()
+        dismiss()
+    }
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
-                Image(book.genre ?? "Fantasy")
+                Image(book.genre ?? "Unknown")
                     .resizable()
                     .scaledToFit()
                 
@@ -31,13 +41,33 @@ struct DetailView: View {
                 .font(.title)
                 .foregroundColor(.secondary)
             
+            // Date
+            if let date = book.date {
+                  Text("Date: \(date.formatted(date: .abbreviated, time: .omitted))")
+            }
+            
             Text(book.review ?? "No review yet.")
                 .padding()
             
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
+            
+            //ReviewDateView(date: Date.now)
         }
         .navigationTitle(book.title ?? "Unknown Book")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Delete book?", isPresented: $isShowing) {
+            Button("Delete", role: .destructive, action: deleteBook)
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text("Are you sure?")
+        }
+        .toolbar {
+            Button {
+                isShowing = true
+            } label: {
+                Label("Delete this book", systemImage: "trash")
+            }
+        }
     }
 }
