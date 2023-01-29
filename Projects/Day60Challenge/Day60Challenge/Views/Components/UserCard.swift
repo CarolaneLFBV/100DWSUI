@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct UserCard: View {
-    @State var user: User
+    let user: CachedUser
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(user.name)
+            Text(user.wrappedName)
                 .font(.headline)
             
             HStack() {
@@ -26,8 +26,3 @@ struct UserCard: View {
     }
 }
 
-struct UserCard_Previews: PreviewProvider {
-    static var previews: some View {
-        UserCard(user: User.userPH)
-    }
-}

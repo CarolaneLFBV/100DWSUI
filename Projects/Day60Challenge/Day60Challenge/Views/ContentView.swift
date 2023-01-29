@@ -35,10 +35,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List(cachedUsers) { user in
-                NavigationLink {
-                    UserView(user: user)
-                } label: {
-                    Text(user.wrappedName)
+                NavigationLink(destination: UserView(user: user)) {
+                    UserCard(user: user)
                 }
             }
             .navigationTitle("Users List")
