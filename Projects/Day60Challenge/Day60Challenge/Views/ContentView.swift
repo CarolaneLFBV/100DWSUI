@@ -1,55 +1,82 @@
-//
-//  ContentView.swift
-//  Day60Challenge
-//
-//  Created by Carolane LEFEBVRE on 29/01/2023.
-//
+    //
+    //  ContentView.swift
+    //  Day60Challenge
+    //
+    //  Created by Carolane LEFEBVRE on 29/01/2023.
+    //
 
 import SwiftUI
 
 struct ContentView: View {
     @State private var users = [User]()
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: CachedUser.entity(), sortDescriptors: []) var cachedUsers: FetchedResults<CachedUser>
     
-    func loadData() {
-        guard let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json") else {
-            print("Invalid URL")
-            return
-        }
-        let request = URLRequest(url: url)
-        let userDecoder = JSONDecoder()
-        userDecoder.dateDecodingStrategy = .iso8601
+    func loadData() async -> [User]? {
+        let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let userData = data else {
-                print("No response from data: \(error?.localizedDescription ?? "Unknown")")
-                return
-            }
-            
-            do {
-                users = try userDecoder.decode([User].self, from: userData)
-                return
-            } catch {
-                print("Decoding Failed: \(error)")
-            }
-            
-            print("Fetch Failed: \(error?.localizedDescription ?? "Unknown")")
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(for: request)
+            let decodedData = try decoder.decode([User].self, from: data)
+            return decodedData
+        } catch {
+            print(error)
         }
-        .resume()
+        return nil
     }
     
     var body: some View {
-        NavigationView {
-            List(users) { user in
-                NavigationLink(destination: UserView(user: user)) {
-                    UserCard(user: user)
+        NavigationStack {
+            List(cachedUsers) { user in
+                NavigationLink {
+                    UserView(user: user)
+                } label: {
+                    Text(user.wrappedName)
                 }
             }
             .navigationTitle("Users List")
-            .onAppear(perform: loadData)
+            .task {
+                if cachedUsers.isEmpty {
+                    if let retrievedUsers = await loadData() {
+                        users = retrievedUsers
+                    }
+                    
+                    await MainActor.run {
+                        for user in users {
+                            let newUser = CachedUser(context: moc)
+                            newUser.name = user.name
+                            newUser.id = user.id
+                            newUser.isActive = user.isActive
+                            newUser.age = Int16(user.age)
+                            newUser.about = user.about
+                            newUser.email = user.email
+                            newUser.address = user.address
+                            newUser.company = user.company
+                            newUser.formattedDate = user.formattedDate
+                            
+                            for friend in user.friends {
+                                let newFriend = CachedFriend(context: moc)
+                                newFriend.id = friend.id
+                                newFriend.name = friend.name
+                                newFriend.user = newUser
+                            }
+                            
+                            try? moc.save()
+                        }
+                    }
+                }
+            } //task
         }
     }
 }
-
+        
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

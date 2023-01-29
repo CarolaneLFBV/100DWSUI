@@ -19,6 +19,10 @@ struct User: Identifiable, Codable {
     var registered: Date
     var tags: [String]
     var friends: [Friend]
+    
+    var formattedDate: String {
+        registered.formatted(date: .abbreviated, time: .omitted)
+    }
 }
 
 extension User {
