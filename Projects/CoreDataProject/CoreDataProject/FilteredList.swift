@@ -8,18 +8,37 @@
 import SwiftUI
 import CoreData
 
+
 struct FilteredList<T: NSManagedObject, Content: View>: View {
-    @FetchRequest var fetchRequest: FetchedResults<T>
+    var fetchRequest: FetchRequest<T>
+    var results: FetchedResults<T> { fetchRequest.wrappedValue }
+
     let content: (T) -> Content
-    
+
     var body: some View {
-        List(fetchRequest, id: \.self) { item in
-            self.content(item)
+        List(results, id: \.self) { result in
+            self.content(result)
         }
     }
     
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+    enum FilterType: String {
+        case beginsWith = "BEGINSWITH"
+        case beginsWithCaseInsensitive = "BEGINSWITH[c]"
+        case contains = "CONTAINS"
+        case containsCaseInsensitive = "CONTAINS[c]"
+        case endsWith = "ENDSWITH"
+        case endsWithCaseInsensitive = "ENDSWITH[c]"
+    }
+
+    init(filterKey: String,
+         filterType: FilterType,
+         filterValue: String,
+         sortDescriptors: [NSSortDescriptor] = [],
+         @ViewBuilder content: @escaping (T) -> Content) {
+
+        fetchRequest = FetchRequest<T>(entity: T.entity(),
+                                       sortDescriptors: sortDescriptors,
+                                       predicate: NSPredicate(format: "%K \(filterType.rawValue) %@", filterKey, filterValue))
         self.content = content
     }
 }
