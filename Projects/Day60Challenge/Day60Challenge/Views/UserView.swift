@@ -33,10 +33,9 @@ struct UserView: View {
                     Text("📨 Email: \(user.email)")
                     Text("🏢 Works at: \(user.company)")
                 }
-                .padding(5)
                 .font(.system(size: 20))
-                    
             }
+            .padding()
             
             VStack(alignment: .leading) {
                 Text("Friend(s) list: ")
