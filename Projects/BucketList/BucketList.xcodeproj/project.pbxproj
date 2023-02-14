@@ -13,6 +13,7 @@
 		514897D92992AE3900276831 /* DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514897D82992AE3900276831 /* DocumentDirectory.swift */; };
 		514897DB2992AEAC00276831 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514897DA2992AEAC00276831 /* Location.swift */; };
 		51B997EB299BE4E700E7D0AC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B997EA299BE4E700E7D0AC /* ViewModel.swift */; };
+		51B997EF299BE89B00E7D0AC /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B997EE299BE89B00E7D0AC /* FileManager-DocumentsDirectory.swift */; };
 		51E8C43E2991901D00603450 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8C43D2991901D00603450 /* BucketListApp.swift */; };
 		51E8C4402991901D00603450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8C43F2991901D00603450 /* ContentView.swift */; };
 		51E8C4422991901D00603450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E8C4412991901D00603450 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		514897D82992AE3900276831 /* DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDirectory.swift; sourceTree = "<group>"; };
 		514897DA2992AEAC00276831 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		51B997EA299BE4E700E7D0AC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		51B997EE299BE89B00E7D0AC /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		51E8C43A2991901D00603450 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E8C43D2991901D00603450 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		51E8C43F2991901D00603450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 				51381E6129942FA900F2D082 /* Result.swift */,
 				51B997EA299BE4E700E7D0AC /* ViewModel.swift */,
 				514897DA2992AEAC00276831 /* Location.swift */,
+				51B997EE299BE89B00E7D0AC /* FileManager-DocumentsDirectory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				514897D92992AE3900276831 /* DocumentDirectory.swift in Sources */,
 				51E8C44D2991929800603450 /* ComparableCustomType.swift in Sources */,
 				51381E6029942C3000F2D082 /* EditView.swift in Sources */,
+				51B997EF299BE89B00E7D0AC /* FileManager-DocumentsDirectory.swift in Sources */,
 				514897DB2992AEAC00276831 /* Location.swift in Sources */,
 				51381E6229942FA900F2D082 /* Result.swift in Sources */,
 				514897D72992AD4800276831 /* AppState.swift in Sources */,
