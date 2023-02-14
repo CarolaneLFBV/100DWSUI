@@ -6,6 +6,7 @@
 //
 
 import MapKit
+import LocalAuthentication
 
 extension ContentView {
     // responsible for running all user interface updates
@@ -14,6 +15,8 @@ extension ContentView {
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
+        
+        @Published var isUnlocked: Bool = false
         
         init() {
             do {
@@ -41,6 +44,27 @@ extension ContentView {
                 try data.write(to: savePath, options: [.atomic, .completeFileProtection]) // make sure to secure the file
             } catch {
                 print("Unable to save data")
+            }
+        }
+        
+        func authenticate() {
+            let context = LAContext()
+            var error: NSError?
+            
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                let reason = "Please authenticate yourself to unlock your places"
+                
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticateError in
+                    if success {
+                        Task { @MainActor in
+                            self.isUnlocked = true
+                        }
+                    } else {
+                        // error
+                    }
+                }
+            } else {
+                // error
             }
         }
 
