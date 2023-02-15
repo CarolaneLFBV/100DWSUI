@@ -15,6 +15,8 @@ extension ContentView {
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
+        @Published var message: String = ""
+        @Published var isShowing: Bool = false
         
         @Published var isUnlocked: Bool = false
         
@@ -60,11 +62,17 @@ extension ContentView {
                             self.isUnlocked = true
                         }
                     } else {
-                        // error
+                        Task { @MainActor in
+                            self.isShowing = true
+                            self.message = "Failed to authenticate, please try again"
+                        }
                     }
                 }
             } else {
-                // error
+                Task { @MainActor in
+                    self.isShowing = true
+                    self.message = "You do not have the requirements to authenticate with biometrics"
+                }
             }
         }
 

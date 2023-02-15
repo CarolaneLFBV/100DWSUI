@@ -48,13 +48,13 @@ struct ContentView: View {
                             viewModel.save()
                         } label: {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
                     }
                 }
             }
@@ -73,6 +73,9 @@ struct ContentView: View {
                 viewModel.update(location: newLocation)
                 viewModel.save()
             }
+        }
+        .alert(isPresented: $viewModel.isShowing) {
+            Alert(title: Text("Face not recognized"), message: Text(viewModel.message), dismissButton: .default(Text("OK")))
         }
     }
 }
