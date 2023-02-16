@@ -13,7 +13,7 @@ struct EditView: View {
     @StateObject private var viewModel: ViewModel
 
     init(location: Location, onSave: @escaping (Location) -> Void) {
-        _editViewModel = StateObject(wrappedValue: ViewModel(location: location))
+        _viewModel = StateObject(wrappedValue: ViewModel(location: location))
 
         self.onSave = onSave
     }
@@ -56,7 +56,7 @@ struct EditView: View {
                 }
             }
             .task {
-                await editViewModel.fetchNearbyPlaces()
+                await viewModel.fetchNearbyPlaces()
             }
         }
     }
