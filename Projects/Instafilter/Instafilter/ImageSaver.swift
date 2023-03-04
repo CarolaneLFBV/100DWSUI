@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 class ImageSaver: NSObject {
     var successHandler: (() -> Void)?
     var errorHandler: ((Error) -> Void)?
