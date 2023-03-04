@@ -7,18 +7,41 @@
 
 import SwiftUI
 
-struct UserImageView: View {
-    @StateObject var viewModel = ViewModel()
+struct UserImageView: View {    
+    @State private var image: Image?
+    @State private var filterIntensity = 0.5
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+    @State private var currentImg: UIImage?
+    
+    @State private var savedPictures: [String] = UserDefaults.standard.object(forKey: "savedPictures") as? [String] ?? [String]()
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+        
+        currentImg = inputImage
+    }
     
     var body: some View {
-        NavigationView {
-            List(viewModel.images) { userImage in
-                Image(uiImage: userImage.image)
-                    .resizable()
-                    .scaledToFit()
+        Section (header: Text("Insertion d'image")) {
+            VStack {
+                ZStack {
+                    
+                    Text("Ajouter une image")
+                        .foregroundColor(.orange)
+                        .font(.system(size: 15, weight: .bold))
+                    
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                }
+                .onTapGesture {
+                    showingImagePicker = true
+                }
             }
-            .onChange(of: viewModel.inputImage) { _ in viewModel.converToSwiftUiImage() }
         }
+        .font(.system(size: 13, weight: .bold))
     }
 }
 
