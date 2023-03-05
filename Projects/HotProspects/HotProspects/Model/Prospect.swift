@@ -19,21 +19,39 @@ class Prospect: Identifiable, Codable {
 @MainActor class Prospects: ObservableObject {
     @Published private(set) var people: [Prospect]
     let saveKey = "SavedData"
+    
+    /// Challenge
+    let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedProspect")
+
 
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
+        /// Save into JSON
+        do {
+            let data = try Data(contentsOf: savePath)
+            people = try JSONDecoder().decode([Prospect].self, from: data)
+        } catch {
+            people = []
+        }
+        /*
+         if let data = UserDefaults.standard.data(forKey: saveKey) {
             if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
                 people = decoded
                 return
             }
         }
-        people = []
+         */
     }
     
     private func save() {
-        if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(encoded, forKey: saveKey)
+        do {
+            let data = try JSONEncoder().encode(people)
+            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save data")
         }
+        /*if let encoded = try? JSONEncoder().encode(people) {
+            UserDefaults.standard.set(encoded, forKey: saveKey)
+         }*/
     }
     
     func add(_ prospect: Prospect) {

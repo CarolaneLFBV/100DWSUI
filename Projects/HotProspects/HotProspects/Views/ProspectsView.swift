@@ -41,6 +41,14 @@ struct ProspectsView: View {
     
     var body: some View {
         NavigationStack {
+            /* Test BTN
+             Button("test") {
+                let prospect = Prospect()
+                prospect.name = "Paul Hudson"
+                prospect.emailAddress = "paulhudson@hackingwithswift.com"
+                prospects.add(prospect)
+            }
+             */
             List {
                 ForEach(filteredProspects) { prospect in
                     VStack(alignment: .leading) {

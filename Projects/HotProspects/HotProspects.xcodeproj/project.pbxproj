@@ -27,6 +27,7 @@
 		518633F029B38F5A0066A636 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518633EF29B38F5A0066A636 /* Prospect.swift */; };
 		518633F329B3ED760066A636 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 518633F229B3ED760066A636 /* CodeScanner */; };
 		51C727BD29B4CA7500339231 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C727BC29B4CA7500339231 /* ImageSaver.swift */; };
+		51C727C229B4D1C800339231 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C727C129B4D1C800339231 /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		518633ED29B38D4D0066A636 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		518633EF29B38F5A0066A636 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		51C727BC29B4CA7500339231 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		51C727C129B4D1C800339231 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				518633EF29B38F5A0066A636 /* Prospect.swift */,
+				51C727C129B4D1C800339231 /* FileManager-DocumentsDirectory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				518633CE29B37C7F0066A636 /* ContentViewLessons.swift in Sources */,
 				518633D829B384270066A636 /* SwiftResultLesson.swift in Sources */,
 				518633DE29B386C20066A636 /* ContextMenusLesson.swift in Sources */,
+				51C727C229B4D1C800339231 /* FileManager-DocumentsDirectory.swift in Sources */,
 				518633BF29B37A360066A636 /* ContentView.swift in Sources */,
 				518633E129B387B40066A636 /* CustomSwipActionListLesson.swift in Sources */,
 				518633D529B383500066A636 /* ManuallyPublishingLesson.swift in Sources */,
