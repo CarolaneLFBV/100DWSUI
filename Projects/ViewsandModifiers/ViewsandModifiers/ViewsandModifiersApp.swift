@@ -1,14 +1,14 @@
 //
-//  ViewsandModifiersApp.swift
-//  ViewsandModifiers
+//  ViewsAndModifiersApp.swift
+//  ViewsAndModifiers
 //
-//  Created by Carolane LEFEBVRE on 22/11/2022.
+//  Created by Carolane LEFEBVRE on 08/04/2023.
 //
 
 import SwiftUI
 
 @main
-struct ViewsandModifiersApp: App {
+struct ViewsAndModifiersApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

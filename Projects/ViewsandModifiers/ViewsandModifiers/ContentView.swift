@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  ViewsandModifiers
+//  ViewsAndModifiers
 //
-//  Created by Carolane LEFEBVRE on 22/11/2022.
+//  Created by Carolane LEFEBVRE on 08/04/2023.
 //
 
 import SwiftUI
@@ -10,8 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Hello World")
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Hello, world!")
         }
+        .padding()
     }
 }
 
