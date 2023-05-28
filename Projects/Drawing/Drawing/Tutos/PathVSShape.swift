@@ -39,16 +39,15 @@ struct Triangle: Shape {
 
 struct PathVSShape: View {
     var body: some View {
-        Arc(startAngle: .degrees(0), endAngle: .degrees(110), clockwise: true)
+        /*
+         Arc(startAngle: .degrees(0), endAngle: .degrees(110), clockwise: true)
             .stroke(.blue, lineWidth: 10)
             .frame(width: 300, height: 300)
+         */
         
-        /*
          Triangle()
             .fill(.red)
-            .stroke(.red, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
             .frame(width: 300, height: 300)
-         */
     }
 }
 

@@ -17,6 +17,11 @@
 		51FC74032A1CD04300D2B6A5 /* TransformShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC74022A1CD04300D2B6A5 /* TransformShapes.swift */; };
 		51FC74052A1CD42200D2B6A5 /* ImagePaintTuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC74042A1CD42200D2B6A5 /* ImagePaintTuto.swift */; };
 		51FC74072A1CD66C00D2B6A5 /* MetalDrawingGrp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FC74062A1CD66C00D2B6A5 /* MetalDrawingGrp.swift */; };
+		920827542A237FA500128AF1 /* AnimatableDataTuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920827532A237FA500128AF1 /* AnimatableDataTuto.swift */; };
+		927AE14E2A23730F00F48A2B /* SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AE14D2A23730F00F48A2B /* SpecialEffects.swift */; };
+		927AE1522A2377CF00F48A2B /* AnimatablePairTuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AE1512A2377CF00F48A2B /* AnimatablePairTuto.swift */; };
+		927AE1552A237BB500F48A2B /* SpirographModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AE1542A237BB500F48A2B /* SpirographModel.swift */; };
+		927AE1572A237C3100F48A2B /* SpirographView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AE1562A237C3100F48A2B /* SpirographView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		51FC74022A1CD04300D2B6A5 /* TransformShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformShapes.swift; sourceTree = "<group>"; };
 		51FC74042A1CD42200D2B6A5 /* ImagePaintTuto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePaintTuto.swift; sourceTree = "<group>"; };
 		51FC74062A1CD66C00D2B6A5 /* MetalDrawingGrp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDrawingGrp.swift; sourceTree = "<group>"; };
+		920827532A237FA500128AF1 /* AnimatableDataTuto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableDataTuto.swift; sourceTree = "<group>"; };
+		927AE14D2A23730F00F48A2B /* SpecialEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffects.swift; sourceTree = "<group>"; };
+		927AE1512A2377CF00F48A2B /* AnimatablePairTuto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairTuto.swift; sourceTree = "<group>"; };
+		927AE1542A237BB500F48A2B /* SpirographModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographModel.swift; sourceTree = "<group>"; };
+		927AE1562A237C3100F48A2B /* SpirographView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpirographView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 		51FC73EC2A1CC8FA00D2B6A5 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				927AE1532A237B9B00F48A2B /* Spirograph */,
 				51FC73FB2A1CC93800D2B6A5 /* Tutos */,
 				51FC73ED2A1CC8FA00D2B6A5 /* DrawingApp.swift */,
 				51FC73EF2A1CC8FA00D2B6A5 /* ContentView.swift */,
@@ -89,8 +100,20 @@
 				51FC74022A1CD04300D2B6A5 /* TransformShapes.swift */,
 				51FC74042A1CD42200D2B6A5 /* ImagePaintTuto.swift */,
 				51FC74062A1CD66C00D2B6A5 /* MetalDrawingGrp.swift */,
+				927AE14D2A23730F00F48A2B /* SpecialEffects.swift */,
+				927AE1512A2377CF00F48A2B /* AnimatablePairTuto.swift */,
+				920827532A237FA500128AF1 /* AnimatableDataTuto.swift */,
 			);
 			path = Tutos;
+			sourceTree = "<group>";
+		};
+		927AE1532A237B9B00F48A2B /* Spirograph */ = {
+			isa = PBXGroup;
+			children = (
+				927AE1542A237BB500F48A2B /* SpirographModel.swift */,
+				927AE1562A237C3100F48A2B /* SpirographView.swift */,
+			);
+			path = Spirograph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,13 +187,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FC74072A1CD66C00D2B6A5 /* MetalDrawingGrp.swift in Sources */,
+				927AE1572A237C3100F48A2B /* SpirographView.swift in Sources */,
 				51FC74032A1CD04300D2B6A5 /* TransformShapes.swift in Sources */,
 				51FC73FD2A1CC95300D2B6A5 /* CustomPath.swift in Sources */,
 				51FC73F02A1CC8FA00D2B6A5 /* ContentView.swift in Sources */,
 				51FC74052A1CD42200D2B6A5 /* ImagePaintTuto.swift in Sources */,
+				927AE14E2A23730F00F48A2B /* SpecialEffects.swift in Sources */,
+				920827542A237FA500128AF1 /* AnimatableDataTuto.swift in Sources */,
 				51FC73EE2A1CC8FA00D2B6A5 /* DrawingApp.swift in Sources */,
+				927AE1552A237BB500F48A2B /* SpirographModel.swift in Sources */,
 				51FC74012A1CCF1900D2B6A5 /* InsettableShapeTuto.swift in Sources */,
 				51FC73FF2A1CCD3B00D2B6A5 /* PathVSShape.swift in Sources */,
+				927AE1522A2377CF00F48A2B /* AnimatablePairTuto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
