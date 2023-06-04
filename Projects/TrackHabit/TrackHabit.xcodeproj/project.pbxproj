@@ -11,7 +11,7 @@
 		920C09D32A238822002709E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C09D22A238822002709E1 /* ContentView.swift */; };
 		920C09D52A238823002709E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C09D42A238823002709E1 /* Assets.xcassets */; };
 		920C09D82A238823002709E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C09D72A238823002709E1 /* Preview Assets.xcassets */; };
-		92F930A72A24BE61008FEE64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F930A62A24BE61008FEE64 /* Model.swift */; };
+		92F930A72A24BE61008FEE64 /* Habits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F930A62A24BE61008FEE64 /* Habits.swift */; };
 		92F930AB2A24BFF1008FEE64 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F930AA2A24BFF1008FEE64 /* NewHabitView.swift */; };
 		92F930AF2A24CFEF008FEE64 /* CheckboxiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F930AE2A24CFEF008FEE64 /* CheckboxiOS.swift */; };
 		92F930B22A24D0C5008FEE64 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F930B12A24D0C5008FEE64 /* HabitView.swift */; };
@@ -24,7 +24,7 @@
 		920C09D22A238822002709E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		920C09D42A238823002709E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		920C09D72A238823002709E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		92F930A62A24BE61008FEE64 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		92F930A62A24BE61008FEE64 /* Habits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habits.swift; sourceTree = "<group>"; };
 		92F930AA2A24BFF1008FEE64 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
 		92F930AE2A24CFEF008FEE64 /* CheckboxiOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxiOS.swift; sourceTree = "<group>"; };
 		92F930B12A24D0C5008FEE64 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		92F930B02A24CFF7008FEE64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92F930A62A24BE61008FEE64 /* Model.swift */,
+				92F930A62A24BE61008FEE64 /* Habits.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 				92F930B22A24D0C5008FEE64 /* HabitView.swift in Sources */,
 				92F930AB2A24BFF1008FEE64 /* NewHabitView.swift in Sources */,
 				92F930B42A24D1CF008FEE64 /* HabitCard.swift in Sources */,
-				92F930A72A24BE61008FEE64 /* Model.swift in Sources */,
+				92F930A72A24BE61008FEE64 /* Habits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

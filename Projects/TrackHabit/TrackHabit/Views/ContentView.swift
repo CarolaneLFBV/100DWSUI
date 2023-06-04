@@ -14,9 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(habits.items) { item in
-                    NavigationLink(destination: HabitView(habit: item)) {
-                        HabitCard(habit: item)
+                ForEach(habits.habits) { habit in
+                    NavigationLink(destination: HabitView(habits: habits, currentHabit: habit)) {
+                        HabitCard(habit: habit)
                     }
                 }
                 .onDelete(perform: removeItems)
@@ -30,16 +30,11 @@ struct ContentView: View {
             .sheet(isPresented: $showSheet) {
                 NewHabitView(habits: self.habits)
             }
-            .onAppear {
-                for i in 0..<habits.items.count {
-                    habits[i].isDone = UserDefaults.standard.bool(forKey: "\(habits[i].name)isDone")
-                }
-            }
         }
     }
     
     func removeItems(at offsets: IndexSet) {
-        self.habits.items.remove(atOffsets: offsets)
+        self.habits.habits.remove(atOffsets: offsets)
     }
 }
 

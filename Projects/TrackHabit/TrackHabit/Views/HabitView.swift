@@ -8,30 +8,31 @@
 import SwiftUI
 
 struct HabitView: View {
-    @State var habit: HabitItem
+    @ObservedObject var habits: Habits
+    @State var currentHabit: HabitItem
+    
     var body: some View {
-        VStack {
-            Text(habit.name)
-                .font(.title)
-                .bold()
-            Text(habit.description)
-            
-            Button {
-                addToDone()
-            } label: {
-                Text(habit.isDone == true ? "Undone" : "Done")
+        NavigationStack {
+            Form {
+                Section {
+                    Text("Description: \(currentHabit.description)")
+                    Text("Habit count: \(currentHabit.habitCount)")
+                }
+                
+                Section {
+                    Button("Log Habit") {
+                        self.currentHabit.habitCount += 1
+                        self.habits.updateHabitCount(habit: currentHabit)
+                    }
+                }
             }
+            .navigationTitle(Text(currentHabit.name))
         }
-    }
-
-    func addToDone() {
-        habit.isDone.toggle()
-        UserDefaults.standard.set(habit.isDone, forKey: "\(habit.name)isDone")
     }
 }
 
 struct HabitView_Previews: PreviewProvider {
     static var previews: some View {
-        HabitView(habit: HabitItem(name: "Name", description: "This is a description of a habit", isDone: false))
+        HabitView(habits: Habits(),  currentHabit: HabitItem(name: "Test", description: "Description", habitCount: 0))
     }
 }

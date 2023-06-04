@@ -17,12 +17,6 @@ struct HabitCard: View {
                     .bold()
                 Text(habit.description)
             }
-            .foregroundColor(isDone == true ? .gray : .black)
-            
-            Spacer()
-            
-            Image(systemName: UserDefaults.standard.bool(forKey: "\(habit.name)isDone") == true ? "checkmark.square.fill" : "square")
-                .foregroundColor(.blue)
         }
         .padding()
     }
@@ -31,6 +25,6 @@ struct HabitCard: View {
 
 struct HabitCard_Previews: PreviewProvider {
     static var previews: some View {
-        HabitCard(habit: HabitItem(name: "Name", description: "Description", isDone: false))
+        HabitCard(habit: HabitItem(name: "Name", description: "Description", habitCount: 0))
     }
 }

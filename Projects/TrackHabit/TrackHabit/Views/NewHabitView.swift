@@ -22,11 +22,16 @@ struct NewHabitView: View {
         NavigationStack {
             Form {
                 Section("Habit informations") {
-                    TextField("Name*", text: $name)
+                    TextField("Name", text: $name)
                     TextField("Description", text: $description)
                 }
                 Button("Save") {
-                    createNewItem()
+                    let habit = HabitItem(name: self.name, description: self.description, habitCount: 0)
+                    self.habits.addHabit(habit)
+                    
+                    isPresented = true
+                    alertTitle = "Success"
+                    alertMessage = "Your habit has been created!"
                 }
             }
             .navigationTitle("New Habit")
@@ -39,35 +44,13 @@ struct NewHabitView: View {
                 }
             }
             .alert(alertTitle, isPresented: $isPresented) {
-                Button("OK", role: .none) { }
+                Button("OK") {
+                    dismiss()
+                }
             } message: {
                 Text(alertMessage)
             }
         }
-    }
-    
-    func createNewItem() {
-        guard (self.name != "") else {
-            alertTitle = "Error"
-            alertMessage = "Your habit's name cannot be empty."
-            isPresented = true
-            return
-        }
-        
-        guard (self.description != "") else {
-            alertTitle = "Error"
-            alertMessage = "Your habit's description cannot be empty."
-            isPresented = true
-            return
-        }
-    
-        let habit = HabitItem(name: name, description: description, isDone: false)
-        habits.items.append(habit)
-        
-        isPresented = true
-        alertTitle = "Success"
-        alertMessage = "Your habit has been created!"
-        
     }
 }
 
