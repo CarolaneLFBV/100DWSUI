@@ -1,8 +1,6 @@
 
 ### Swift ###
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
 xcuserdata/
@@ -26,6 +24,9 @@ DerivedData/
 
 ## Obj-C/Swift specific
 *.hmap
+
+## DS_Store
+*.DS_Store
 
 ## App packaging
 *.ipa
@@ -82,5 +83,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-
-# End of https://www.toptal.com/developers/gitignore/api/swift
