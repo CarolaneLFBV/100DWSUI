@@ -31,11 +31,16 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
 struct DynamicallyFilteringFR: View {
     @Environment(\.managedObjectContext) var moc
     @State private var nameFilter = "A"
-    @State private var filterParam = "lastName"
+    @State private var filterParamSelected = "lastName"
+    @State private var filterParam = ["lastName", "firstName"]
     
     var body: some View {
         VStack {
-            TextField("firstName or lastName", text: $filterParam)
+            Picker("Choose your filter", selection: $filterParamSelected) {
+                ForEach(filterParam, id: \.self) { param in
+                    Text("\(param)")
+                }
+            }
             FilteredList(filterKey: filterParam, filterValue: nameFilter) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
@@ -61,7 +66,7 @@ struct DynamicallyFilteringFR: View {
             }
             
             Button("Show S") {
-                nameFilterf = "S"
+                nameFilter = "S"
             }
         }
     }
