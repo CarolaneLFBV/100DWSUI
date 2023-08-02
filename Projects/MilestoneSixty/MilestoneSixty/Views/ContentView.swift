@@ -36,7 +36,9 @@ struct ContentView: View {
             .searchable(text: $searchText)
             .onAppear {
                 api.loadData { (users) in
-                    self.users = users
+                    if users.isEmpty {
+                        self.users = users
+                    }
                 }
             }
             .navigationTitle("Users")
