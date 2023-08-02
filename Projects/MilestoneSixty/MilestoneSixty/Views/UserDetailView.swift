@@ -22,25 +22,36 @@ struct UserDetailView: View {
                 Text(user.isActive == true ? "Connected" : "Disconnected")
             }
             
-            Text("Registered at: \(user.registered)")
-                        
             Text(user.about)
                 .padding()
                 .font(.subheadline)
                 .foregroundColor(.blue)
-            
-            Spacer()
-
+                        
             HStack {
                 DetailCardboardView(title: "Age", text: "\(user.age)")
                 DetailCardboardView(title: "Company", text: "\(user.company)")
             }
-            
-            Spacer()
-            
-            Text("Address: \(user.address)")
-            
-            Spacer()
+                                    
+            List {
+                
+                Section("Informations") {
+                    Text("Address: \(user.address)")
+                    Text("Mail: \(user.email)")
+                }
+                
+                Section("Friends") {
+                    ForEach(user.friends) { friend in
+                        Text(friend.name)
+                    }
+                }
+            }
         }
+    }
+}
+
+
+struct UserDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserDetailView(user: User(isActive: true, name: "William", age: 21, company: "Inkram", email: "william@mail.com", address: "1234 Avenur Street", about: "Relatives from my mom's birthday", registered: "", tags: ["tag1", "tag2"], friends: [Friend(name: "Richard"), Friend(name: "Melanie")]))
     }
 }
