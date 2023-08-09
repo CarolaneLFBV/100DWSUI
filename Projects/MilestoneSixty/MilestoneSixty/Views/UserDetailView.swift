@@ -31,7 +31,7 @@ struct UserDetailView: View {
                 DetailCardboardView(title: "Age", text: "\(user.age)")
                 DetailCardboardView(title: "Company", text: "\(user.company)")
             }
-                                    
+            
             List {
                 
                 Section("Informations") {
