@@ -21,6 +21,7 @@
 		9286648A2A858E1400950533 /* ButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928664892A858E1400950533 /* ButtonStyleView.swift */; };
 		92AFEB612A8525B20082A853 /* ConformanceComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AFEB602A8525B20082A853 /* ConformanceComparable.swift */; };
 		92AFEB652A852CC00082A853 /* ViewStatesEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AFEB642A852CC00082A853 /* ViewStatesEnums.swift */; };
+		92DC61FE2A864E3600DE3910 /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC61FD2A864E3600DE3910 /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		928664892A858E1400950533 /* ButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleView.swift; sourceTree = "<group>"; };
 		92AFEB602A8525B20082A853 /* ConformanceComparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceComparable.swift; sourceTree = "<group>"; };
 		92AFEB642A852CC00082A853 /* ViewStatesEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatesEnums.swift; sourceTree = "<group>"; };
+		92DC61FD2A864E3600DE3910 /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				928664842A85818C00950533 /* ContentView-ViewModel.swift */,
+				92DC61FD2A864E3600DE3910 /* EditView-ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				92160FD32A8412870053F3B2 /* BucketListApp.swift in Sources */,
 				92AFEB652A852CC00082A853 /* ViewStatesEnums.swift in Sources */,
 				928664852A85818C00950533 /* ContentView-ViewModel.swift in Sources */,
+				92DC61FE2A864E3600DE3910 /* EditView-ViewModel.swift in Sources */,
 				9286648A2A858E1400950533 /* ButtonStyleView.swift in Sources */,
 				928664822A85799B00950533 /* Result.swift in Sources */,
 				9286647C2A85582100950533 /* Location.swift in Sources */,
