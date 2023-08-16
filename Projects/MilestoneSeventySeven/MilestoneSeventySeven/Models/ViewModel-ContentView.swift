@@ -11,9 +11,10 @@ import Foundation
 @MainActor class ViewModel: ObservableObject {
     @Published private(set) var users: [User]
     @Published var selectedUser: User?
+    @Published var isUnlocked = false
     
     let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedUsers")
-    
+        
     init() {
         do {
             let data = try Data(contentsOf: savePath)
@@ -25,7 +26,7 @@ import Foundation
     
     func addUser(name: String, description: String, inputImage: UIImage?) {
         guard let imageData = inputImage?.jpegData(compressionQuality: 0.8) else { return }
-        let newUser = User(id: UUID(), name: "New User", description: "User's Description", avatar: imageData)
+        let newUser = User(id: UUID(), name: name, description: description, avatar: imageData)
         users.append(newUser)
         saveUser()
         print("User Added")
@@ -49,6 +50,12 @@ import Foundation
         users.remove(atOffsets: offsets)
         saveUser()
         print("Deleted")
+    }
+    
+    func authenticate() {
+        let locationFetcher = LocationFetcher()
+        isUnlocked = true
+        locationFetcher.start()
     }
 }
 
