@@ -16,10 +16,13 @@ class Prospect: Identifiable, Codable {
 }
 
 @MainActor class Prospects: ObservableObject {
-    @Published private(set) var people: [Prospect]
+    @Published var people: [Prospect]
     let saveKey = "SavedData"
     
-    init() {
+    let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedData")
+    
+    /* Saving with UserDefaults
+     init() {
         if let data = UserDefaults.standard.data(forKey: saveKey) {
             if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
                 people = decoded
@@ -28,6 +31,17 @@ class Prospect: Identifiable, Codable {
         }
         people = []
     }
+     */
+    
+    // Saving with JSON and documents directory
+    init() {
+        do {
+            let data = try Data(contentsOf: savePath)
+            people = try JSONDecoder().decode([Prospect].self, from: data)
+        } catch {
+            people = []
+        }
+    }
     
     func toggle(_ prospect: Prospect) {
         objectWillChange.send()
@@ -35,9 +49,20 @@ class Prospect: Identifiable, Codable {
         save()
     }
     
-    private func save() {
+    /*
+     private func save() {
         if let encoded = try? JSONEncoder().encode(people) {
             UserDefaults.standard.set(encoded, forKey: saveKey)
+        }
+    }
+     */
+    
+    private func save() {
+        do {
+            let data = try JSONEncoder().encode(people)
+            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save data.")
         }
     }
     

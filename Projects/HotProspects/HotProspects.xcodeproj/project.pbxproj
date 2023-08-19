@@ -28,6 +28,7 @@
 		92767F042A8E4E3000ADAE9D /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92767F032A8E4E3000ADAE9D /* ProspectsView.swift */; };
 		92767F062A8E4E4000ADAE9D /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92767F052A8E4E4000ADAE9D /* MeView.swift */; };
 		92767F092A8E505600ADAE9D /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92767F082A8E505600ADAE9D /* Prospect.swift */; };
+		928429A22A912C6600761126 /* FileManager-DocumenntsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928429A12A912C6600761126 /* FileManager-DocumenntsDirectory.swift */; };
 		92D76CFF2A90DEFD00EDE101 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 92D76CFE2A90DEFD00EDE101 /* CodeScanner */; };
 		92D76D022A90ED2B00EDE101 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D76D012A90ED2B00EDE101 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		92767F032A8E4E3000ADAE9D /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		92767F052A8E4E4000ADAE9D /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		92767F082A8E505600ADAE9D /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
+		928429A12A912C6600761126 /* FileManager-DocumenntsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumenntsDirectory.swift"; sourceTree = "<group>"; };
 		92D76D012A90ED2B00EDE101 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				92D76D012A90ED2B00EDE101 /* ImageSaver.swift */,
+				928429A12A912C6600761126 /* FileManager-DocumenntsDirectory.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				9259938D2A8CFF780020B675 /* MainView.swift in Sources */,
 				922A12C72A8CFF11009A34E7 /* EditView.swift in Sources */,
 				92D76D022A90ED2B00EDE101 /* ImageSaver.swift in Sources */,
+				928429A22A912C6600761126 /* FileManager-DocumenntsDirectory.swift in Sources */,
 				92767EFB2A8E478600ADAE9D /* LocalNotification.swift in Sources */,
 				92767F012A8E4C1F00ADAE9D /* AddDependencies.swift in Sources */,
 				925993902A8D001A0020B675 /* TabViewTutorial.swift in Sources */,

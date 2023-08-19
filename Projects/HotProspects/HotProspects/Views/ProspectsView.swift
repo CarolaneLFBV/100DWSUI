@@ -39,7 +39,8 @@ struct ProspectsView: View {
     }
     
     @State private var isShowingScanner = false
-    
+    @State private var showingFilterProspects = false
+
     var body: some View {
         NavigationStack {
             List {
@@ -82,14 +83,29 @@ struct ProspectsView: View {
                 }
             }
             .toolbar {
-                Button {
-                    isShowingScanner = true
-                } label: {
-                    Label("Scan", systemImage: "qrcode.viewfinder")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isShowingScanner = true
+                    } label: {
+                        Label("Scan", systemImage: "qrcode.viewfinder")
+                    }
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingFilterProspects = true
+                    } label: {
+                        Label("Sort", systemImage: "list.bullet")
+                    }
+                }
+
             }
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: handleScan)
+                CodeScannerView(codeTypes: [.qr], simulatedData: "Amanda Hudson\noamanda@icloud.com", completion: handleScan)
+            }
+            .confirmationDialog("Sort prospects", isPresented: $showingFilterProspects) {
+                Button("Name", action: sortByName)
+                Button("Mail Address", action: sortByMailAddress)
             }
         }
     }
@@ -141,6 +157,18 @@ struct ProspectsView: View {
                     }
                 }
             }
+        }
+    }
+    
+    func sortByName() {
+        prospects.people.sort {
+            $0.name < $1.name
+        }
+    }
+    
+    func sortByMailAddress() {
+        prospects.people.sort {
+            $0.emailAddress < $1.emailAddress
         }
     }
 }
