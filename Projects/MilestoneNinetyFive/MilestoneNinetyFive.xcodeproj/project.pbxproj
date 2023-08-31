@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		921AE9072AA09C4100BC82B1 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AE9062AA09C4100BC82B1 /* Dice.swift */; };
+		921AE90B2AA09C6400BC82B1 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AE90A2AA09C6400BC82B1 /* FileManager-DocumentsDirectory.swift */; };
+		921AE90D2AA0ACC300BC82B1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AE90C2AA0ACC300BC82B1 /* MainView.swift */; };
+		921AE90F2AA0AEAC00BC82B1 /* ViewModel-DicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AE90E2AA0AEAC00BC82B1 /* ViewModel-DicesView.swift */; };
+		921AE9132AA0AFA700BC82B1 /* DiceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AE9122AA0AFA700BC82B1 /* DiceRow.swift */; };
+		921AE9152AA0C42A00BC82B1 /* AddDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921AE9142AA0C42900BC82B1 /* AddDiceView.swift */; };
+		92460DDC2AA0948A004DC6C4 /* MilestoneNinetyFiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92460DDB2AA0948A004DC6C4 /* MilestoneNinetyFiveApp.swift */; };
+		92460DDE2AA0948A004DC6C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92460DDD2AA0948A004DC6C4 /* ContentView.swift */; };
+		92460DE02AA0948B004DC6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92460DDF2AA0948B004DC6C4 /* Assets.xcassets */; };
+		92460DE32AA0948B004DC6C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92460DE22AA0948B004DC6C4 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		921AE9062AA09C4100BC82B1 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		921AE90A2AA09C6400BC82B1 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		921AE90C2AA0ACC300BC82B1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		921AE90E2AA0AEAC00BC82B1 /* ViewModel-DicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel-DicesView.swift"; sourceTree = "<group>"; };
+		921AE9122AA0AFA700BC82B1 /* DiceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRow.swift; sourceTree = "<group>"; };
+		921AE9142AA0C42900BC82B1 /* AddDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiceView.swift; sourceTree = "<group>"; };
+		92460DD82AA0948A004DC6C4 /* MilestoneNinetyFive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilestoneNinetyFive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92460DDB2AA0948A004DC6C4 /* MilestoneNinetyFiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneNinetyFiveApp.swift; sourceTree = "<group>"; };
+		92460DDD2AA0948A004DC6C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92460DDF2AA0948B004DC6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92460DE22AA0948B004DC6C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92460DD52AA09489004DC6C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		921AE9082AA09C4300BC82B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				921AE9062AA09C4100BC82B1 /* Dice.swift */,
+				921AE90E2AA0AEAC00BC82B1 /* ViewModel-DicesView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		921AE9092AA09C5000BC82B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92460DDB2AA0948A004DC6C4 /* MilestoneNinetyFiveApp.swift */,
+				921AE90A2AA09C6400BC82B1 /* FileManager-DocumentsDirectory.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92460DCF2AA09489004DC6C4 = {
+			isa = PBXGroup;
+			children = (
+				92460DDA2AA0948A004DC6C4 /* MilestoneNinetyFive */,
+				92460DD92AA0948A004DC6C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92460DD92AA0948A004DC6C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92460DD82AA0948A004DC6C4 /* MilestoneNinetyFive.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92460DDA2AA0948A004DC6C4 /* MilestoneNinetyFive */ = {
+			isa = PBXGroup;
+			children = (
+				921AE9092AA09C5000BC82B1 /* Controller */,
+				921AE9082AA09C4300BC82B1 /* Models */,
+				927698872AA0951F00F8CA3A /* Views */,
+				92460DDF2AA0948B004DC6C4 /* Assets.xcassets */,
+				92460DE12AA0948B004DC6C4 /* Preview Content */,
+			);
+			path = MilestoneNinetyFive;
+			sourceTree = "<group>";
+		};
+		92460DE12AA0948B004DC6C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				92460DE22AA0948B004DC6C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		927698872AA0951F00F8CA3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92460DDD2AA0948A004DC6C4 /* ContentView.swift */,
+				921AE90C2AA0ACC300BC82B1 /* MainView.swift */,
+				921AE9122AA0AFA700BC82B1 /* DiceRow.swift */,
+				921AE9142AA0C42900BC82B1 /* AddDiceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92460DD72AA09489004DC6C4 /* MilestoneNinetyFive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92460DE62AA0948B004DC6C4 /* Build configuration list for PBXNativeTarget "MilestoneNinetyFive" */;
+			buildPhases = (
+				92460DD42AA09489004DC6C4 /* Sources */,
+				92460DD52AA09489004DC6C4 /* Frameworks */,
+				92460DD62AA09489004DC6C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MilestoneNinetyFive;
+			productName = MilestoneNinetyFive;
+			productReference = 92460DD82AA0948A004DC6C4 /* MilestoneNinetyFive.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92460DD02AA09489004DC6C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					92460DD72AA09489004DC6C4 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 92460DD32AA09489004DC6C4 /* Build configuration list for PBXProject "MilestoneNinetyFive" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92460DCF2AA09489004DC6C4;
+			productRefGroup = 92460DD92AA0948A004DC6C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92460DD72AA09489004DC6C4 /* MilestoneNinetyFive */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92460DD62AA09489004DC6C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92460DE32AA0948B004DC6C4 /* Preview Assets.xcassets in Resources */,
+				92460DE02AA0948B004DC6C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92460DD42AA09489004DC6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				921AE90F2AA0AEAC00BC82B1 /* ViewModel-DicesView.swift in Sources */,
+				92460DDE2AA0948A004DC6C4 /* ContentView.swift in Sources */,
+				921AE9072AA09C4100BC82B1 /* Dice.swift in Sources */,
+				921AE90B2AA09C6400BC82B1 /* FileManager-DocumentsDirectory.swift in Sources */,
+				921AE90D2AA0ACC300BC82B1 /* MainView.swift in Sources */,
+				921AE9152AA0C42A00BC82B1 /* AddDiceView.swift in Sources */,
+				921AE9132AA0AFA700BC82B1 /* DiceRow.swift in Sources */,
+				92460DDC2AA0948A004DC6C4 /* MilestoneNinetyFiveApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		92460DE42AA0948B004DC6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92460DE52AA0948B004DC6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92460DE72AA0948B004DC6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MilestoneNinetyFive/Preview Content\"";
+				DEVELOPMENT_TEAM = 2VP2J2SZVR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carolanelfbv.MilestoneNinetyFive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92460DE82AA0948B004DC6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MilestoneNinetyFive/Preview Content\"";
+				DEVELOPMENT_TEAM = 2VP2J2SZVR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carolanelfbv.MilestoneNinetyFive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92460DD32AA09489004DC6C4 /* Build configuration list for PBXProject "MilestoneNinetyFive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92460DE42AA0948B004DC6C4 /* Debug */,
+				92460DE52AA0948B004DC6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92460DE62AA0948B004DC6C4 /* Build configuration list for PBXNativeTarget "MilestoneNinetyFive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92460DE72AA0948B004DC6C4 /* Debug */,
+				92460DE82AA0948B004DC6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92460DD02AA09489004DC6C4 /* Project object */;
+}
